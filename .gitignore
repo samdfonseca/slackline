@@ -4,3 +4,5 @@
 build
 dist
 .python-version
+**/__pycache__/
+**/*.pyc
