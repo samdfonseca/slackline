@@ -12,7 +12,7 @@ class Message(Base):
 
     def run(self):
         if self.options.get('-') is True:
-            msg = sys.stdin.read()
+            msg = sys.stdin.read().strip()
             to = self.options.get('TO')
             sys.stdout.write('{}\n'.format(dumps({'msg': msg, 'to': to})))
             self.slack.send_message(to, msg)
